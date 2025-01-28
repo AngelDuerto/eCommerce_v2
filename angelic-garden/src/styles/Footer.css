@@ -1,0 +1,73 @@
+/*Footer CSS*/
+footer {
+    background-color: #eaeaea;
+    padding: 20px;
+    box-shadow: 4px 4px 4px 3px rgb(0, 0, 0, 0.1);
+  }
+  
+  .footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footerBrand img{
+    width: 100px;
+  }
+  
+  .footerLinks ul {
+    list-style-type: none;
+  }
+  
+  .footerLinks li{
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .footerLinks a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .footerLinks a:hover{
+    text-decoration: underline #28a745;
+  }
+  
+  .footerContact .footerIcons{
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footerIcons a{
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .footerIcons a:hover{
+    background-color: #bce3c4;
+    border-radius: 100px;
+  }
+  
+  .footer-bottom{
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Footer */
+  @media (max-width: 768px) {
+    .footerBrand img{
+      width: 0px;
+    }
+    .footerContent {
+      flex-direction: column;
+    }
+    .footerLinks ul {
+      margin-bottom: 20px;
+    }
+    .footerLinks {
+      margin-top: 15px;
+      justify-content: center;
+    }
+  }

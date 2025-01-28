@@ -1,0 +1,103 @@
+/* Product Grid CSS (Home page and Catalog page)*/
+.containerGrid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    gap: 30px;
+    padding: 25px;
+    max-width: 95%;
+    margin: 30px auto;
+    margin-top: 30px;
+  }
+  
+  .containerGrid section{
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 1.5s ease;
+  }
+  
+  
+  .containerGrid section:hover{
+    transform: scale(1.05);
+  }
+  
+  .containerGrid img{
+    width: 100%;
+    border-bottom: 1px solid #333;
+    border-radius: 10px 10px 0 0;
+    transition: transform 1.5s ease;
+  }
+  
+  .containerGrid img:hover{
+    transform: scale(1.02);
+  }
+  
+  .containerGrid h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .containerGrid .price {
+    font-size: 16px;
+    color: #28a745;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .containerGrid .description {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .containerGrid a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .exclusiveTitle{
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 70px;
+    color: #333;
+    font-family: "Oswald", sans-serif;
+  }
+  
+
+  .noProductsMessage{
+    height: 80vh;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 70px;
+    color: #333;
+    font-family: "Oswald", sans-serif;
+  }
+
+  /* Responsive Home/Catalog page */
+  @media (max-width: 1440px){
+    .containerGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 1000px){
+    .containerGrid {
+      grid-template-columns:repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px){
+    .containerGrid {
+      grid-template-columns: 1fr;
+    }
+  }

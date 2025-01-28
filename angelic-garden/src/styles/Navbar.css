@@ -1,0 +1,115 @@
+/* Navigation bar CSS*/
+
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    height: 100px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  
+  #logoA{
+    margin-top: 20px;
+    width: 180px;
+    vertical-align: middle;
+  }
+  
+  .navLinks {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navLinks ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+  }
+  
+  .navLinks a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .navLinks a:hover{
+    text-decoration: underline #28a745;
+  }
+  
+  .navIcons {
+    display: flex;
+    gap: 15px;
+    color: #333;
+    font-size: 20px;
+  }
+  
+  /* Responsive Navigation bar */
+  
+  @media (max-width: 768px) {
+      .navBar {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 30px;
+      height: auto;
+    }
+    #logoA {
+      width: 150px;
+      margin-bottom: -25px;
+  }
+    .navLinks {
+      display: flex;
+      flex: 1;
+      justify-content: flex-start;
+      width: 100%;
+    }
+    .navLinks ul {
+      flex-direction: row;
+      gap: 20px;
+    }
+  
+    .navIcons {
+      justify-content: flex-end;
+      flex: 1;
+      width: 100%;
+      margin-left: auto;
+      font-size: 18px;
+      gap: 10px;
+    }
+  }
+  
+  
+  @media (max-width: 480px) {
+    .navBar {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 20px;
+      height: auto;
+    }
+    #logoA {
+      width: 150px;
+      margin-bottom: -25px;
+    }
+    .navLinks {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+    .navLinks ul {
+      flex-direction: row;
+      gap: 20px;
+    }
+    .navIcons {
+      display: flex;
+      justify-content: center;
+      font-size: 18px;
+      gap: 10px;
+      margin-top: 15px;
+    }
+  } 
