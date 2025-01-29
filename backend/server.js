@@ -11,13 +11,25 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+// Get the directory name of the current module
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const distPath = path.resolve(__dirname, "../dist");
+// Serve static files from the 'dist' directory
+app.use(express.static(distPath));
+
+
 //create MySQL connection using environment variables
 const db = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
+    port: process.env.DB_PORT,
+    multipleStatements: true
 });
+
+
 
 //Connect to the database
 db.connect((err) => {
@@ -32,7 +44,7 @@ db.connect((err) => {
 app.get("/api/products", (req, res) => {
     const { price, category, collection, size } = req.query;
 
-    let query = "SELECT * FROM products WHERE price";
+    let query = "SELECT * FROM products WHERE 1=1";
     // let query = "SELECT * FROM products WHERE 1=1";
     const queryParams = []
 

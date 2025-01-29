@@ -21,7 +21,7 @@ function ProductGrid() {
         setError(null);
         
         const query = new URLSearchParams(filters).toString();
-        fetch(`http://localhost:3000/api/products?${query}`)
+        fetch(`https://your-heroku-app.herokuapp.com/api/products?${query}`)
             .then((response) => response.json())
             .then((data) => {
                 setProducts(data);
@@ -48,7 +48,7 @@ function ProductGrid() {
             
             {loading && <p>Loading...</p>}
 
-            {error && <p className="errorMessage">{error}</p>}
+            {error && <p className="noProductsMessage">{error}</p>}
 
             {!loading && !error && products.length === 0 && (
                 <p className="noProductsMessage">Not a match. The product your looking for is not Available.</p>
