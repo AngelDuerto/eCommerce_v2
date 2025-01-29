@@ -2,27 +2,29 @@ import React, { useState, useEffect } from "react"
 import '../styles/Product.css';
 import Filters from "./Filter";
 
-
+// Component for displaying a grid of products with filtering options
 function ProductGrid() {
+    // State for storing fetched product data
     const [products, setProducts] = useState([]);
-    const [filters, setFilters] = useState({
+    const [filters, setFilters] = useState({ // State for storing filter values
         price: "",
         category: "",
         collection: "",
         size: "",
     });
 
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(false); // State for tracking loading status
+    const [error, setError] = useState(null); // State for tracking errors
 
+    // Fetch products from the server when filters change
     useEffect(() => {
-        console.log("Filters:", filters);
-        setLoading(true);
-        setError(null);
+        console.log("Filters:", filters); // Log the current filter values (debugging)
+        setLoading(true); // Set loading state to true
+        setError(null); // Clear any previous errors
 
-        const query = new URLSearchParams(filters).toString();
-        fetch(`/api/products?${query}`)
-            .then((response) => response.json())
+        const query = new URLSearchParams(filters).toString(); // Convert filters to query string
+        fetch(`/api/products?${query}`) // Fetch products with filters
+            .then((response) => response.json()) // Parse JSON response
             .then((data) => {
                 setProducts(data);
                 setLoading(false);
