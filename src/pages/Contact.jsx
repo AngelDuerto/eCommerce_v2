@@ -4,10 +4,11 @@ import '../styles/Contact.css';
 
 
 function ContactForm(){
-    const { register, handleSubmit, formState: {errors } } = useForm();
+    const { register, handleSubmit, reset ,formState: {errors } } = useForm();
 
     const onSubmit = (data) => {
-        alert('Form submitted: ' + JSON.stringify(data));
+        alert('Thank you for your message! We will get back to you soon.');
+        reset();
     };
 
     return (

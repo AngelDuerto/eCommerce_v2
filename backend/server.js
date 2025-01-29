@@ -84,6 +84,10 @@ app.get("/api/products", (req, res) => {
     });
 });
 
+// Handle React routes (Catalog, Contact, etc.)
+app.get("*", (req, res) => {
+    res.sendFile(path.join(distPath, "index.html"));
+});
 
 // Start the server
 app.listen(PORT, () => {
