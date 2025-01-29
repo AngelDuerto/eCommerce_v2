@@ -1,8 +1,47 @@
-# React + Vite
+# 🌿 Angelic Garden - E-Commerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An elegant e-commerce platform for plant lovers, built using **React, Express, Node.js, and MySQL**.
 
-Currently, two official plugins are available:
+## 🚀 Features
+- 🌱 Browse a catalog of plants and flowers  
+- 🔍 Filter products by **price range, category, collection, and size**   
+- 📦 Responsive design for a smooth user experience  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
+- **Frontend**: React (Vite)  
+- **Backend**: Node.js, Express  
+- **Database**: MySQL  
+- **Styling**: CSS  
+
+## 📦 Node Packages Used
+### 🔹 Backend Packages
+| Package       | Purpose |
+|--------------|---------|
+| **express**  | Backend framework for building APIs |
+| **cors**     | Enables Cross-Origin Resource Sharing |
+| **dotenv**   | Loads environment variables from `.env` file |
+| **mysql2**   | Connects Node.js to MySQL database |
+
+### 🔹 Frontend Packages
+| Package               | Purpose |
+|-----------------------|---------|
+| **react-hook-form**   | Manages form validation in React |
+| **react-router-dom**  | Enables routing and navigation |
+
+## 🔧 Setup & Installation
+### 1️⃣ Clone the Repository
+```sh
+git clone
+cd folder
+npm install
+
+cd backend
+npm install
+
+### Set up .env
+DB_HOST=your_host
+DB_USER=your_user
+DB_PASSWORD=your_password
+DB_NAME=your_database
+
+Thank you!!!
