@@ -19,9 +19,9 @@ function ProductGrid() {
         console.log("Filters:", filters);
         setLoading(true);
         setError(null);
-        
+
         const query = new URLSearchParams(filters).toString();
-        fetch(`https://your-heroku-app.herokuapp.com/api/products?${query}`)
+        fetch(`/api/products?${query}`)
             .then((response) => response.json())
             .then((data) => {
                 setProducts(data);
@@ -36,16 +36,16 @@ function ProductGrid() {
 
     const handleFilterChange = (event) => {
         const { name, value } = event.target;
-        setFilters((prevFilters) => ({ 
-            ...prevFilters, 
-            [name]: value 
+        setFilters((prevFilters) => ({
+            ...prevFilters,
+            [name]: value
         }));
     };
 
     return (
         <div>
             <Filters filters={filters} handleFilterChange={handleFilterChange} />
-            
+
             {loading && <p>Loading...</p>}
 
             {error && <p className="noProductsMessage">{error}</p>}
