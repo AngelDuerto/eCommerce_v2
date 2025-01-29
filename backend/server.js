@@ -2,6 +2,8 @@ import dotenv from "dotenv"; //load environment variables
 import express from "express";
 import mysql from "mysql2";
 import cors from "cors";
+import { fileURLToPath } from "url";
+import path from "path";
 
 dotenv.config(); //load environment variables from .env file
 const app = express()
