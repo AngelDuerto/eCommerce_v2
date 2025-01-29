@@ -11,8 +11,8 @@ function Home() {
             </div>
             <div className="contentSection">
             <div className="textSection">
-                    <h2 className="newTitle">Garden Fresh Ideas</h2>
-                    <p className="newText">Discover the latest trends in gardening with our exclusive selection. Perfect for every garden lover!</p>
+                    <h2 className="newTitle">The Fresh Garden</h2>
+                    <p className="newText">At Angelic Garden, we believe that every space deserves a touch of natural elegance and serenity. Our carefully curated collection of plants transforms ordinary rooms into extraordinary sanctuaries, bringing life and vitality to your home or office. From lush indoor tropical plants to delicate flowering specimens, each plant in our selection is chosen not just for its beauty, but for its ability to create an atmosphere of tranquility and joy. </p>
                 </div>
                 <HomeSlider />
             </div>
