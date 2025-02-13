@@ -1,6 +1,5 @@
 # 🌿 Angelic Garden - E-Commerce Website
-
-An elegant e-commerce platform for plant lovers, built using **React, Express, Node.js, and MySQL**.
+Beautifully designed e-commerce platform dedicated to plant lovers, offering a seamless and enjoyable shopping experience for indoor and outdoor plants. Built with modern web technologies, the platform is user-friendly and visually appealing. The project leverages **React** for the front-end, **Express** and **Node.js** for the back-end, and **MySQL** for the database, ensuring a robust and scalable architecture.
 
 ## 🚀 Features
 - 🌱 Browse a catalog of plants and flowers  
